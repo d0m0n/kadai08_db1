@@ -8,10 +8,10 @@ $note= $_POST['note'];
 
 //2. DB接続します(さくらサーバ)
 // ローカルのデータベースにアクセスするための必要な情報を変数に渡す
-$db_name = 'plan-gs_gs_kadai08';  // データベース名
-$db_host = 'mysql3105.db.sakura.ne.jp'; // DBホスト
-$db_id   = 'plan-gs_gs_kadai08';  // ユーザー名(さくらサーバはDB名と同一)
-$db_pw   = 'password08';  // パスワード
+$db_name = '';  // データベース名
+$db_host = ''; // DBホスト
+$db_id   = '';  // ユーザー名(さくらサーバはDB名と同一)
+$db_pw   = '';  // パスワード
 
 // try catch構文でデータベースの情報取得を実施
 try {
