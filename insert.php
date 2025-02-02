@@ -6,13 +6,21 @@ $end= $_POST['end'];
 $place = $_POST['address'];
 $note= $_POST['note'];
 
+//2. DB接続します(さくらサーバ)
+// ローカルのデータベースにアクセスするための必要な情報を変数に渡す
+$db_name = 'plan-gs_gs_kadai08';  // データベース名
+$db_host = 'mysql3105.db.sakura.ne.jp'; // DBホスト
+$db_id   = 'plan-gs_gs_kadai08';  // ユーザー名(さくらサーバはDB名と同一)
+$db_pw   = 'password08';  // パスワード
 
-//2. DB接続します
+// try catch構文でデータベースの情報取得を実施
 try {
-  //ID:'root', Password: xamppは 空白 ''
-$pdo = new PDO('mysql:dbname=plan-gs_gs_kadai08;charset=utf8;host=mysql3105.db.sakura.ne.jp','','');
+  $server_info = 'mysql:dbname=' . $db_name . ';charset=utf8;host=' . $db_host;
+  $pdo = new PDO($server_info, $db_id, $db_pw);
 } catch (PDOException $e) {
-exit('DBConnectError:'.$e->getMessage());
+  // エラーだった場合の情報を返す処理
+  // exitした時点でそれ以降の処理は行われません
+  exit('DB Connection Error:' . $e->getMessage());
 }
 
 //３．データ登録SQL作成
