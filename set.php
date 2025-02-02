@@ -4,7 +4,7 @@ $view = ""; // 変数を初期化
 //1.  DB接続
 try {
     //Password....最後の引数の部分。MAMP='root',XAMPP=''
-    $pdo = new PDO('mysql:dbname=gs_kadai08;charset=utf8;host=localhost', 'root', '');
+    $pdo = new PDO('mysql:dbname=plan-gs_gs_kadai08;charset=utf8;host=localhost', 'root', '');
 } catch (PDOException $e) {
     exit('DBConnectError' . $e->getMessage());
 }

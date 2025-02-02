@@ -12,8 +12,8 @@ https://plan-gs.sakura.ne.jp/kadai08_db1/index.php
 
 ## ④ 作ったアプリケーション用の ID または Password がある場合
 
-- ID: なし
-- PW: なし
+- ID: plan-gs_gs_kadai08
+- PW: password08
 
 ## ⑤ 工夫した点・こだわった点
 
