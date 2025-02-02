@@ -10,7 +10,7 @@ $note= $_POST['note'];
 //2. DB接続します
 try {
   //ID:'root', Password: xamppは 空白 ''
-$pdo = new PDO('mysql:dbname=plan-gs_gs_kadai08;charset=utf8;host=mysql3105.db.sakura.ne.jp','root','');
+$pdo = new PDO('mysql:dbname=plan-gs_gs_kadai08;charset=utf8;host=mysql3105.db.sakura.ne.jp','','');
 } catch (PDOException $e) {
 exit('DBConnectError:'.$e->getMessage());
 }
